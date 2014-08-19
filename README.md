@@ -5,12 +5,17 @@ http-resetfull-utils
 实例代码：
 
 Map<String, String> heads = Maps.newLinkedHashMap();
+
 heads.put("appid", "K4da4b49983cc1u009");
+
 HttpExecutor executor = new HttpExecutor(new DefaultMessageFilter(), heads);
 
 Map<String, Object> params = new LinkedHashMap<String, Object>();
+
 params.put("id", "1");
+
 params.put("name", "李斯");
+
 params.put("phone", "13988778766");
 
 executor.doPost("http://127.0.0.1:8080/demo/user/contact", params, new TextPrintMessageResolve());
